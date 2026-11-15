@@ -1,15 +1,22 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#060608;color:#F8FAFC;font-family:system-ui,-apple-system,sans-serif;text-align:center;overflow-x:hidden}
 .aura{position:fixed;top:-140px;left:50%;transform:translateX(-50%);width:480px;height:480px;background:radial-gradient(circle,rgba(212,175,55,.25),transparent 68%);pointer-events:none;z-index:0}
-header{position:sticky;top:0;z-index:20;background:rgba(6,6,8,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,175,55,.25);padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
+header{position:sticky;top:0;z-index:20;background:rgba(6,6,8,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,175,55,.25);padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
 .brand{font-weight:900;letter-spacing:2px;color:#D4AF37;font-size:13px}
 .ig-btn{color:#F8FAFC;text-decoration:none;font-size:12px;font-weight:700;border:1px solid rgba(212,175,55,.5);padding:6px 14px;border-radius:99px}
-@keyframes shine{0%{left:-100%}35%,100%{left:130%}}
-.wrap{position:relative;z-index:1;max-width:480px;margin:auto;padding:34px 20px 64px}
+.wrap{position:relative;z-index:1;max-width:520px;margin:auto;padding:34px 20px 64px}
 .tag{display:inline-block;border:1px solid rgba(212,175,55,.5);background:rgba(212,175,55,.08);color:#FDE047;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:99px;margin-bottom:16px}
 h1{font-family:Georgia,serif;font-size:33px;line-height:1.15;margin-bottom:14px}
 h1 span{color:#D4AF37;font-style:italic}
-.sub{color:#A1A1AA;font-size:15px;line-height:1.6;margin-bottom:28px}
+h2{font-family:Georgia,serif;font-size:24px;margin-bottom:12px}
+.sub{color:#A1A1AA;font-size:15px;line-height:1.6;margin-bottom:26px}
+@keyframes scrollX{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes shine{0%{left:-100%}35%,100%{left:130%}}
+.marquee{overflow:hidden;width:100%;margin:26px 0;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:14px;width:max-content;animation:scrollX 18s linear infinite}
+.fcard{width:230px;background:rgba(212,175,55,.07);border:1px solid rgba(212,175,55,.35);border-radius:18px;padding:18px;text-align:left;flex-shrink:0}
+.fcard b{color:#D4AF37;font-size:11px;letter-spacing:1px;display:block;margin-bottom:4px}
+.fcard p{font-size:13px;color:#E2E8F0;line-height:1.4}
 .card{background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid rgba(212,175,55,.28);border-radius:20px;padding:22px;text-align:left;margin-bottom:14px}
 .card b{color:#D4AF37;font-size:11px;letter-spacing:1.5px;display:block;margin-bottom:6px}
 .card h3{font-size:17px;margin-bottom:6px}
@@ -20,4 +27,7 @@ h1 span{color:#D4AF37;font-style:italic}
 .btn::after{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-25deg);animation:shine 2.8s infinite}
 .wa{background:#16A34A;color:#FFF}.wa::after{display:none}
 .ig{background:transparent;color:#D4AF37;border:1px solid rgba(212,175,55,.55)}.ig::after{display:none}
+details{background:rgba(255,255,255,.03);border:1px solid rgba(212,175,55,.2);border-radius:14px;padding:15px;text-align:left;margin-top:10px}
+summary{font-weight:700;font-size:14px;color:#F8FAFC;cursor:pointer}
+details p{color:#9CA3AF;font-size:13px;margin-top:8px;line-height:1.5}
 footer{border-top:1px solid rgba(255,255,255,.08);padding:24px;font-size:12px;color:#71717A}
